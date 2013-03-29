@@ -65,8 +65,7 @@
           </form>
           <ul class="nav pull-right">
             {% url 'zinnia_sitemap' as sitemap_url %}
-            <li {% if sitemap in request.path %}class="active"{% endif %}>
-            <li>
+            <li {% if sitemap_url in request.path %}class="active"{% endif %}>
               <a href="{{ sitemap_url }}" title="{% trans "Sitemap" %}" class="sitemap">
                 {% trans "Sitemap" %}
               </a>
